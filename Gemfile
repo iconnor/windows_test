@@ -53,10 +53,20 @@ gem 'nested-hstore'
 gem 'squeel'
 gem 'slim-rails'
 gem 'sucker_punch'
+
+platforms :ruby do 
+# linux
 gem 'unicorn'
 gem 'unicorn-rails'
+gem "therubyracer"
+end
 
-gem 'grape'
+platforms :mingw, :mswin, :x64_mingw do
+# gems specific to windows
+gem 'tzinfo-data'
+end
+
+#gem 'grape'
 gem 'grape', '0.9.0'
 gem 'grape-entity', '~> 0.4'
 gem 'grape-swagger', '~> 0.7.2'
@@ -120,7 +130,6 @@ gem 'rack-attack'
 gem "rack-google-analytics"
 gem "brakeman", '~> 3.0.2'
 gem "metric_fu"
-gem "therubyracer"
 gem "hirefire-resource", github: 'projectlounge/hirefire-resource'
 gem 'yamldiff'
 gem 'mechanize'
