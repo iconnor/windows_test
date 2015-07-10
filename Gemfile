@@ -117,7 +117,6 @@ gem 'rack-attack'
 gem "rack-google-analytics"
 gem "brakeman", '~> 3.0.2'
 gem "metric_fu"
-gem "therubyracer"
 gem "hirefire-resource", github: 'projectlounge/hirefire-resource'
 gem 'yamldiff'
 gem 'mechanize'
